@@ -209,7 +209,7 @@ in {
 
     home.packages = lib.optional (cfg.package != null) cfg.package;
 
-    xdg.configFile = lib.mkMerge [
+    home.xdg.configFile = lib.mkMerge [
       (lib.mapAttrs'
         (name: value: lib.nameValuePair ("anyrun/" + name) value)
         cfg.extraConfigFiles)
