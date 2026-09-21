@@ -7,6 +7,7 @@ use std::fs;
 #[derive(Deserialize, Debug)]
 struct Config {
     prefix: String,
+    #[serde(default = true)]
     pull_currencies: bool,
 }
 
